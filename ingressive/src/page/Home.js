@@ -1,15 +1,15 @@
 // import React, { useState } from 'react'
 import Logo from '../assets/images/Logo.png';
-import Home from '../assets/images/Home.png'
+import HomeImg from '../assets/images/Home.png'
 import Project from '../assets/images/Project.png'
 import Calendar from '../assets/images/Calender.png'
 import TeamChat from '../assets/images/TeamChat.png'
 import Settings from '../assets/images/Settings.png'
 import Navbar from '../components/NavBar'
 import Calender from '../components/Calender'
-import './Main.css'
+import './Home.css'
 
-const Main = () => {
+const Home = () => {
     return (
         <div className='main'>
             <div className="sidebar">
@@ -21,7 +21,7 @@ const Main = () => {
                     <li>
                         <a href="#home">
                             <span className="icons">
-                                <img src={Home} alt="Home" />
+                                <img src={HomeImg} alt="Home" />
                             </span>
                             <span className="links_name">Home</span>
                         </a>
@@ -70,4 +70,4 @@ const Main = () => {
     );
 }
 
-export default Main
+export default Home
