@@ -5,7 +5,7 @@ const ProjectList = () => {
         <div class="projects-section">
             <div class="projects-section-header">
                 <p>Projects</p>
-                <p class="time">December, 12</p>
+                <p class="time">October, 26</p>
             </div>
             <div class="projects-section-line">
                 <div class="projects-status">
@@ -67,7 +67,7 @@ const ProjectList = () => {
             </div>
             <div class="project-boxes jsGridView">
                 <div class="project-box-wrapper">
-                    <div class="project-box" style={{ backgroundColor: "#fee4cb"}}>
+                    <div class="project-box" style={{ backgroundColor: '#fee4cb' }}>
                         <div class="project-box-header">
                             <span>December 10, 2020</span>
                             <div class="more-wrapper">
@@ -98,7 +98,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style={{width: "60%" backgroundColor: "#ff942e"}}></span>
+                                <span class="box-progress" style={{ width: '60%', backgroundColor: '#ff942e' }}></span>
                             </div>
                             <p class="box-progress-percentage">60%</p>
                         </div>
@@ -112,7 +112,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style={{ color: "#ff942e"}}>
+                                <button class="add-participant" style={{ color: '#ff942e' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -129,14 +129,14 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style={{ color: "#ff942e"}}>
+                            <div class="days-left" style={{ color: '#ff942e' }}>
                                 2 Days Left
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-box-wrapper">
-                    <div class="project-box" style={{backgroundColor: "#e9e7fd"}}>
+                    <div class="project-box" style={{ backgroundColor: '#e9e7fd' }}>
                         <div class="project-box-header">
                             <span>December 10, 2020</span>
                             <div class="more-wrapper">
@@ -167,7 +167,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style="width: 50%; background-color: #4f3ff0"></span>
+                                <span class="box-progress" style={{ width: '50%', backgroundColor: '#4f3ff0' }}></span>
                             </div>
                             <p class="box-progress-percentage">50%</p>
                         </div>
@@ -181,7 +181,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2555&q=80"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style="color: #4f3ff0;">
+                                <button class="add-participant" style={{ color: '#4f3ff0' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -198,7 +198,7 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style="color: #4f3ff0;">
+                            <div class="days-left" style={{ color: '#4f3ff0' }}>
                                 2 Days Left
                             </div>
                         </div>
@@ -236,7 +236,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style="width: 80%; background-color: #096c86"></span>
+                                <span class="box-progress" style={{ width: '80%', backgroundColor: '#096c86' }}></span>
                             </div>
                             <p class="box-progress-percentage">80%</p>
                         </div>
@@ -250,7 +250,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1596815064285-45ed8a9c0463?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1215&q=80"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style="color: #096c86;">
+                                <button class="add-participant" style={{ color: '#096c86' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -267,14 +267,14 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style="color: #096c86;">
+                            <div class="days-left" style={{ color: '#096c86' }}>
                                 2 Days Left
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-box-wrapper">
-                    <div class="project-box" style="background-color: #ffd3e2;">
+                    <div class="project-box" style={{ backgroundColor: '#ffd3e2' }}>
                         <div class="project-box-header">
                             <span>December 10, 2020</span>
                             <div class="more-wrapper">
@@ -305,7 +305,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style="width: 20%; background-color: #df3670"></span>
+                                <span class="box-progress" style={{ width: '20%', backgroundColor: '#df3670' }}></span>
                             </div>
                             <p class="box-progress-percentage">20%</p>
                         </div>
@@ -319,7 +319,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1587628604439-3b9a0aa7a163?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjR8fHdvbWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style="color: #df3670;">
+                                <button class="add-participant" style={{ color: '#df3670' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -336,14 +336,14 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style="color: #df3670;">
+                            <div class="days-left" style={{ color: '#df3670' }}>
                                 2 Days Left
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-box-wrapper">
-                    <div class="project-box" style="background-color: #c8f7dc;">
+                    <div class="project-box" style={{ backgroundColor: '#c8f7dc' }}>
                         <div class="project-box-header">
                             <span>December 10, 2020</span>
                             <div class="more-wrapper">
@@ -374,7 +374,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style="width: 60%; background-color: #34c471"></span>
+                                <span class="box-progress" style={{ width: '60%', backgroundColor: '#34c471' }}></span>
                             </div>
                             <p class="box-progress-percentage">60%</p>
                         </div>
@@ -388,7 +388,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style="color: #34c471;">
+                                <button class="add-participant" style={{ color: '#34c471' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -405,14 +405,14 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style="color: #34c471;">
+                            <div class="days-left" style={{ color: '#34c471' }}>
                                 2 Days Left
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="project-box-wrapper">
-                    <div class="project-box" style="background-color: #d5deff;">
+                    <div class="project-box" style={{ backgroundColor: '#d5deff' }}>
                         <div class="project-box-header">
                             <span>December 10, 2020</span>
                             <div class="more-wrapper">
@@ -443,7 +443,7 @@ const ProjectList = () => {
                         <div class="box-progress-wrapper">
                             <p class="box-progress-header">Progress</p>
                             <div class="box-progress-bar">
-                                <span class="box-progress" style="width: 40%; background-color: #4067f9"></span>
+                                <span class="box-progress" style={{ width: '40%', backgroundColor: '#4067f9' }}></span>
                             </div>
                             <p class="box-progress-percentage">40%</p>
                         </div>
@@ -457,7 +457,7 @@ const ProjectList = () => {
                                     src="https://images.unsplash.com/photo-1583195764036-6dc248ac07d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2555&q=80"
                                     alt="participant"
                                 />
-                                <button class="add-participant" style="color: #4067f9;">
+                                <button class="add-participant" style={{ color: '#4067f9' }}>
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         width="12"
@@ -474,7 +474,7 @@ const ProjectList = () => {
                                     </svg>
                                 </button>
                             </div>
-                            <div class="days-left" style="color: #4067f9;">
+                            <div class="days-left" style={{ color: '#4067f9' }}>
                                 2 Days Left
                             </div>
                         </div>
