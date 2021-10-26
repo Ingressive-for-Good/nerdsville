@@ -1,17 +1,25 @@
-// import React, { useState } from 'react'
+import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
+import firebaseApp from '../config/firebase-app';
+import { AuthContext } from '../config/auth';
 import Logo from '../assets/images/Logo.png';
-import HomeImg from '../assets/images/Home.png'
-import Project from '../assets/images/Project.png'
-import Calendar from '../assets/images/Calender.png'
-import TeamChat from '../assets/images/TeamChat.png'
-import Settings from '../assets/images/Settings.png'
-import Navbar from '../components/NavBar'
-import Calender from '../components/Calender'
-import './Home.css'
+import HomeImg from '../assets/images/Home.png';
+import Project from '../assets/images/Project.png';
+import Calendar from '../assets/images/Calender.png';
+import TeamChat from '../assets/images/TeamChat.png';
+import Settings from '../assets/images/Settings.png';
+import Navbar from '../components/NavBar';
+import Calender from '../components/Calender';
+import { BiLogOut } from 'react-icons/bi';
+import './Home.css';
 
 const Home = () => {
+    const { currentUser } = useContext(AuthContext);
+    if (!currentUser) {
+        return <Redirect to="/login" />;
+    }
     return (
-        <div className='main'>
+        <div className="main">
             <div className="sidebar">
                 <div className="logo-details">
                     <img src={Logo} alt="logo" />
@@ -58,16 +66,28 @@ const Home = () => {
                             <span className="links_name">Settings</span>
                         </a>
                     </li>
+                    <li className="profile">
+                        <div className="profile-details">
+                            <img src="" alt="" />
+                            <div className="name_job">
+                                <div className="name">Bash</div>
+                                <div className="job">Bash@gmail.com</div>
+                            </div>
+                        </div>
+                        <span className="icons" id="log_out" onClick={() => firebaseApp.auth().signOut()}>
+                            <BiLogOut />
+                        </span>
+                    </li>
                 </ul>
             </div>
             <div className="home-section">
-                <div className='home-section-inner'>
+                <div className="home-section-inner">
                     <Navbar />
                     <Calender />
                 </div>
             </div>
         </div>
     );
-}
+};
 
-export default Home
+export default Home;

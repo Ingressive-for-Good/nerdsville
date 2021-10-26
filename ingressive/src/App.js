@@ -1,16 +1,21 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Register from "./page/Register";
 import Home from './page/Home';
+import Login from './page/Login';
+import PrivateRoute from './config/privateRoute';
+import { AuthProvider } from './config/auth';
 
 function App() {
   return (
-    <Router>
+    <AuthProvider>
+    <Router> 
     <Switch>
-      <Route exact path="/" component={Register} />
+      <PrivateRoute exact path="/" component={Home} />
+      <Route exact path='/login' component={Login} />
       <Route exact path="/register" component={Register} />
-      <Route exact path='/home' component={Home} />
     </Switch>
   </Router>
+  </AuthProvider>
   );
 }
 

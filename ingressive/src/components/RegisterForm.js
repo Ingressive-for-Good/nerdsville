@@ -1,61 +1,23 @@
-import React, { useState } from "react";
-import { useHistory, Link } from "react-router-dom";
+import React, { useCallback } from "react";
+import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Logo from '../assets/images/Logo.png';
+import firebaseApp from "../config/firebase-app";
 
-const RegisterForm = () => {
-  const [formData, setFormData] = useState({
-    first_name: "",
-    last_name: "",
-    email: "",
-    password: ""
-  })
+const RegisterForm = ({ history }) => {
+    const handleSignUp = useCallback(async event => {
+        event.preventDefault();
+        const { email, password } = event.target.elements;
+        try {
+          await firebaseApp
+            .auth()
+            .createUserWithEmailAndPassword(email.value, password.value);
+          history.push("/");
+        } catch (error) {
+          alert(error);
+        }
+      }, [history]);
 
-  const history = useHistory();
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value})
-  }
-
-  const options = {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer cwzmajfp2v0lf0lo8eb5'
-    },
-    body: JSON.stringify({
-      first_name: formData.first_name,
-      last_name: formData.last_name,
-      email: formData.email,
-      phone: '09009900770',
-      dob: '12/12/1995',
-      gender: 'female',
-      address: {
-        street_line_one: 'No, 20 Aso Villaa',
-        street_line_two: 'Off Mambila Barracksa',
-        post_code: '900991',
-        city: 'Abuja',
-        state: 'FCT',
-        country: 'Nigeria'
-      }
-    })
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    fetch('https://demo-api.pneumahealth.co/patients/', options)
-    .then(res => res.json())
-    .then((res) => {
-      localStorage.setItem('name', res.data.id)
-      console.log(res.data)
-      history.push("/home")
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-    console.log(formData)
-  }
   return (
     <Container>
       <LogoWrapper>
@@ -64,22 +26,22 @@ const RegisterForm = () => {
           MalHub
         </h3>
       </LogoWrapper>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSignUp}>
         <h3>Sign Up</h3>
         <FormContainer>
-          <Input name="first_name" type="text" placeholder="FirstName" value={formData.first_name} onChange={handleChange} required  />
+          <Input name="first_name" type="text" placeholder="FirstName"  required  />
           <Status />
         </FormContainer>
         <FormContainer>
-        <Input name="last_name" type="text" placeholder="LastName" value={formData.last_name} onChange={handleChange} required />
+        <Input name="last_name" type="text" placeholder="LastName"  required />
           <Status />
         </FormContainer>
         <FormContainer>
-        <Input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+        <Input name="email" type="email" placeholder="Email" v required />
           <Status />
         </FormContainer>
         <FormContainer>
-        <Input name="password" type="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
+        <Input name="password" type="password" placeholder="Password"  required />
           <Status />
         </FormContainer>
         <FormContainer>
@@ -87,7 +49,7 @@ const RegisterForm = () => {
           <Status />
         </FormContainer>
         <button type="submit">
-            <Link to='/home' style={{textDecoration: 'none'}}>Sign Up</Link>
+            Sign Up
         </button>
       </Form>
       <div>
@@ -96,7 +58,7 @@ const RegisterForm = () => {
           Service
         </Terms>
         <h4>
-          Already have an account? <a href="/">Sign In</a>
+          Already have an account? <Link to="/login">Sign In</Link>
         </h4>
       </div>
     </Container>
@@ -223,4 +185,4 @@ const Status = styled.div`
   }
 `;
 
-export default RegisterForm;
+export default withRouter(RegisterForm);
