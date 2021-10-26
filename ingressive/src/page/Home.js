@@ -7,6 +7,7 @@ import TeamChat from '../assets/images/TeamChat.png'
 import Settings from '../assets/images/Settings.png'
 import Navbar from '../components/NavBar'
 import Calender from '../components/Calender'
+import Task from '../components/Task';
 import './Home.css'
 
 const Home = () => {
@@ -64,6 +65,7 @@ const Home = () => {
                 <div className='home-section-inner'>
                     <Navbar />
                     <Calender />
+                    <Task />
                 </div>
             </div>
         </div>
