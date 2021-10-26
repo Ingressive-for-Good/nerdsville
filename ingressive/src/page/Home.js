@@ -3,15 +3,17 @@ import { Redirect } from 'react-router-dom';
 import firebaseApp from '../config/firebase-app';
 import { AuthContext } from '../config/auth';
 import Logo from '../assets/images/Logo.png';
-import HomeImg from '../assets/images/Home.png';
-import Project from '../assets/images/Project.png';
-import Calendar from '../assets/images/Calender.png';
-import TeamChat from '../assets/images/TeamChat.png';
-import Settings from '../assets/images/Settings.png';
-import Navbar from '../components/NavBar';
-import Calender from '../components/Calender';
+import HomeImg from '../assets/images/Home.png'
+import Project from '../assets/images/Project.png'
+import Calendar from '../assets/images/Calender.png'
+import TeamChats from '../assets/images/TeamChat.png'
+import Settings from '../assets/images/Settings.png'
+import Navbar from '../components/NavBar'
+import Calender from '../components/Calender'
+import Task from '../components/Task';
+import TeamChat from '../components/TeamChat';
 import { BiLogOut } from 'react-icons/bi';
-import './Home.css';
+import './Home.css'
 
 const Home = () => {
     const { currentUser } = useContext(AuthContext);
@@ -53,7 +55,7 @@ const Home = () => {
                     <li>
                         <a href="#https://tawk.to/MedConsult">
                             <span className="icons">
-                                <img src={TeamChat} alt="Team Chat" />
+                                <img src={TeamChats} alt="Team Chat" />
                             </span>
                             <span className="links_name">Team Chats</span>
                         </a>
@@ -84,6 +86,8 @@ const Home = () => {
                 <div className="home-section-inner">
                     <Navbar />
                     <Calender />
+                    <Task />
+                    <TeamChat />
                 </div>
             </div>
         </div>
