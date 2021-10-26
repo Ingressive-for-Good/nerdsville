@@ -22,6 +22,8 @@ const ChatContainer = styled.div`
     width: 546px;
     height: 434px;
     padding: 10px;
+    left: 830px;
+top: 541px;
 `;
 
 const InviteComponent = styled.div`
