@@ -10,6 +10,7 @@ import TeamChats from '../assets/images/TeamChat.png'
 import Settings from '../assets/images/Settings.png'
 import Navbar from '../components/NavBar'
 import Calender from '../components/Calender'
+import Notification from '../components/Notification'
 import Task from '../components/Task';
 import TeamChat from '../components/TeamChat';
 import { BiLogOut } from 'react-icons/bi';
@@ -85,9 +86,14 @@ const Home = () => {
             <div className="home-section">
                 <div className="home-section-inner">
                     <Navbar />
+                    <div className='section-tab top'>
                     <Calender />
+                    <Notification />
+                    </div>
+                    <div className='section-tab bottom'>
                     <Task />
                     <TeamChat />
+                    </div>
                 </div>
             </div>
         </div>

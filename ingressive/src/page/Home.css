@@ -199,3 +199,9 @@
     font-weight: 500;
     margin: 18px;
 }
+
+.section-tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
