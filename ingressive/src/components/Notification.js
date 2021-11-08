@@ -8,6 +8,9 @@ const Notification = () => {
                 <NHeaderTitle>Notification</NHeaderTitle>
                 <NHeaderOption>View All</NHeaderOption>
             </NHeader>
+            <NContent>
+            
+            </NContent>
         </NSection>
     )
 }
@@ -28,4 +31,11 @@ const NHeaderTitle = styled.div`
 
 const NHeaderOption = styled.div`
     
+`
+
+const NContent = styled.div`
+    background: #57429D;
+    width: 546px;
+    height: 175px;
+    border-radius: 20px;
 `

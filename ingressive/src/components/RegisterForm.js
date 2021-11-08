@@ -1,10 +1,14 @@
-import React, { useCallback } from "react";
+import { collection, onSnapshot, query } from "@firebase/firestore";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link, withRouter } from "react-router-dom";
 import styled from "styled-components";
 import Logo from '../assets/images/Logo.png';
 import firebaseApp from "../config/firebase-app";
+import getFirestore from '../config/firestore'
+import { v4 as uuid } from "uuid/";
 
 const RegisterForm = ({ history }) => {
+  const [ allUser, setAllUSer ] = useState([])
     const handleSignUp = useCallback(async event => {
         event.preventDefault();
         const { email, password } = event.target.elements;
@@ -17,6 +21,28 @@ const RegisterForm = ({ history }) => {
           alert(error);
         }
       }, [history]);
+
+      const storeAllUser = (allUser) => {
+        const saveToFirebase  = firebaseApp.firestore()
+        saveToFirebase.collection('users').add({
+          id: uuid,
+          item: allUser
+        })
+
+      }
+
+      console.log(allUser);
+      useEffect(
+        () => {
+            const db = getFirestore()
+            const u = query(collection(db))
+            
+            onSnapshot(u, (snapShot) => {
+                setAllUSer(snapShot.name)
+            })
+          },
+        []
+    );
 
   return (
     <Container>

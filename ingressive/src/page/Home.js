@@ -1,26 +1,39 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import firebaseApp from '../config/firebase-app';
 import { AuthContext } from '../config/auth';
 import Logo from '../assets/images/Logo.png';
-import HomeImg from '../assets/images/Home.png'
-import Project from '../assets/images/Project.png'
-import Calendar from '../assets/images/Calender.png'
-import TeamChats from '../assets/images/TeamChat.png'
-import Settings from '../assets/images/Settings.png'
-import Navbar from '../components/NavBar'
-import Calender from '../components/Calender'
-import Notification from '../components/Notification'
+import HomeImg from '../assets/images/Home.png';
+import Project from '../assets/images/Project.png';
+import Calendar from '../assets/images/Calender.png';
+import TeamChats from '../assets/images/TeamChat.png';
+import Settings from '../assets/images/Settings.png';
+import Navbar from '../components/NavBar';
+import Calender from '../components/Calender';
+import Notification from '../components/Notification';
 import Task from '../components/Task';
 import TeamChat from '../components/TeamChat';
 import { BiLogOut } from 'react-icons/bi';
-import './Home.css'
+import './Home.css';
+import getFirestore from '../config/firestore';
+import { collection, onSnapshot, query } from '@firebase/firestore';
 
 const Home = () => {
+    useEffect(
+        () => {
+            const db = getFirestore()
+            const u = query(collection(db, "wares"))
+            onSnapshot(u, (snapShot) => {
+                console.log(snapShot.docs.map(doc => doc.data()));
+            })},
+        []
+    );
+    
     const { currentUser } = useContext(AuthContext);
     if (!currentUser) {
         return <Redirect to="/login" />;
     }
+
     return (
         <div className="main">
             <div className="sidebar">
@@ -86,13 +99,13 @@ const Home = () => {
             <div className="home-section">
                 <div className="home-section-inner">
                     <Navbar />
-                    <div className='section-tab top'>
-                    <Calender />
-                    <Notification />
+                    <div className="section-tab top">
+                        <Calender />
+                        <Notification />
                     </div>
-                    <div className='section-tab bottom'>
-                    <Task />
-                    <TeamChat />
+                    <div className="section-tab bottom">
+                        <Task />
+                        <TeamChat />
                     </div>
                 </div>
             </div>
