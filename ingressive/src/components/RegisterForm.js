@@ -32,17 +32,17 @@ const RegisterForm = ({ history }) => {
       }
 
       console.log(allUser);
-      useEffect(
-        () => {
-            const db = getFirestore()
-            const u = query(collection(db))
+    //   useEffect(
+    //     () => {
+    //         const db = getFirestore()
+    //         const u = query(collection(db))
             
-            onSnapshot(u, (snapShot) => {
-                setAllUSer(snapShot.name)
-            })
-          },
-        []
-    );
+    //         onSnapshot(u, (snapShot) => {
+    //             setAllUSer(snapShot.name)
+    //         })
+    //       },
+    //     []
+    // );
 
   return (
     <Container>
